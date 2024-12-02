@@ -1,0 +1,93 @@
+body {
+	font-family: Arial, sans-serif;
+	background-color: #f0f0f0;
+}
+
+h1 {
+	color: black;
+	font-size: 36px;
+}
+
+
+/*index.html의 스타일 지정*/
+.question-list {
+	list-style-type: none;
+	padding: 0;
+	margin: 0;
+}
+
+.question-list li {
+	background-color: #f9f9f9;
+	margin: 10px 0;
+	padding: 10px;
+	border: 1px solid #ccc;
+	border-radius: 5px;
+	font-size: 16px;
+}
+
+.question-list li a {
+	text-decoration: none;
+	color: blue;
+	font-weight: bold;
+}
+
+.question-list li a:hover {
+	text-decoration: underline;
+	color: darkblue;
+}
+
+
+/*detail.html의 스타일 지정*/
+.choice-list legend {
+	font-size: 24px;
+	font-weight: bold;
+	color: #333;
+	margin-bottom: 10px;
+}
+
+.error-msg {
+	color: #ff0000;
+	font-size: 14px;
+	margin-bottom: 15px;
+}
+
+.choice-item {
+	margin: 10px 0;
+	padding: 10px;
+	border: 1px solid #ccc;
+	border-radius: 5px;
+	background-color: #ffffff;
+	display: flex;
+	align-items: center;
+}
+
+/*style radio buttion*/
+.choice-item input[type="radio"] {
+	margin-right: 10px;
+}
+
+/*style the label*/
+.choice-item label {
+	font-size: 16px;
+	color: #007BFF;
+}
+
+.choice-item label:hover {
+	color: #0056b3;
+}
+
+.submit-btn {
+	background-color: #ffffff;
+	color: #000000;
+	font-size: 16px;
+	font-weight: bold;
+	padding: 10px 20px;
+	border: none;
+	border-radius: 5px;
+	cursor: pointer;
+	margin-top: 15px;
+}
+
+.submit-btn:hover {
+	background-color: #0056b3;
+}

@@ -38,8 +38,6 @@ INSTALLED_APPS = [
     'django.contrib.sessions',
     'django.contrib.messages',
     'django.contrib.staticfiles',
-    # add debug toolbar (Chp8)
-    'debug_toolbar',
 ]
 
 MIDDLEWARE = [
@@ -49,9 +47,6 @@ MIDDLEWARE = [
     'django.middleware.csrf.CsrfViewMiddleware',
     'django.contrib.auth.middleware.AuthenticationMiddleware',
     'django.contrib.messages.middleware.MessageMiddleware',
-    # add debug toolbar (Chp8) -> this should appear as early as possible. 
-    # however, it must come after middlewares that encode the response's content ; i.e., GZipMiddleware 
-    'debug_toolbar.middleware.DebugToolbarMiddleware'
     'django.middleware.clickjacking.XFrameOptionsMiddleware',
 ]
 
@@ -109,11 +104,6 @@ AUTH_PASSWORD_VALIDATORS = [
 # Internationalization
 # https://docs.djangoproject.com/en/5.1/topics/i18n/
 
-# this IP setting is due to Debug Toolbar 
-# since the IP address should be known to show the toolbar in local environment
-INTERNAL_IPS = [
-    "127.0.0.1",
-]
 
 LANGUAGE_CODE = 'en-us'
 
@@ -127,7 +117,10 @@ USE_TZ = True
 # Static files (CSS, JavaScript, Images)
 # https://docs.djangoproject.com/en/5.1/howto/static-files/
 
-STATIC_URL = 'static/'
+STATIC_URL = 'static/'       # URL prefix for static files
+SATICFILES_DIRS = [
+    BASE_DIR / "static",     # 여기 추가했어요(12/2)
+]
 
 # Default primary key field type
 # https://docs.djangoproject.com/en/5.1/ref/settings/#default-auto-field

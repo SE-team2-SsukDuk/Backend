@@ -1,12 +1,29 @@
-<form action="{% url 'polls:vote' question.id %}" method="post">
-{% csrf_token %}
-<fieldset>
-    <legend><h1>{{ question.question_text }}</h1></legend>
-    {% if error_message %}<p><strong>{{ error_message }}</strong></p>{% endif %}
-    {% for choice in question.choice_set.all %}
-        <input type="radio" name="choice" id="choice{{ forloop.counter }}" value="{{ choice.id }}">
-        <label for="choice{{ forloop.counter }}">{{ choice.choice_text }}</label><br>
-    {% endfor %}
-</fieldset>
-<input type="submit" value="Vote">
-</form>
+{% load static %}
+
+<!DOCTYPE html>
+<html>
+
+<head>
+    <!-- css 파일 경로를 head 안에 link tag로 지정 -->
+    <link rel="stylesheet" href="{% static 'polls/css/style.css' %}">
+</head>
+
+<body>
+    <form action="{% url 'polls:vote' question.id %}" method="post">
+        {% csrf_token %}
+        <fieldset class="choice-list">
+            <legend>
+                <h1>{{ question.question_txt }}</h1>
+            </legend>
+            {% for choice in question.choice_set.all %}
+            <div class="choice-item">
+                <input type="radio" name="choice" id="choice{{ forloop.counter }}" value="{{ choice.id }}">
+                <label for="choice{{ forloop.counter }}">{{ choice.choice_txt }}</label><br>
+            </div>
+            {% endfor %}
+        </fieldset>
+        <input type="submit" class="submit-btn" value="Vote">
+    </form>
+</body>
+
+</html>
