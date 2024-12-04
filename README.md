@@ -1,4 +1,4 @@
-### Django 예제 - 투표(polls) application 제작하기
+### Django 투표(polls) 예제 application 테스트
 
 ##### 연습 목표
 1. URL, Template, View의 개념 이해하기 (MVT 모듈)
