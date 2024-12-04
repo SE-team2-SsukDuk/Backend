@@ -1,4 +1,4 @@
-### Django 투표(polls) 예제 application 테스트
+### Django 예제 application 테스트
 
 ##### 연습 목표
 1. URL, Template, View의 개념 이해하기 (MVT 모듈)
@@ -17,8 +17,8 @@
 ##### - "가상머신 접속 상태"에서 django 설치 (명령어: pip install django) 
 ###### 여기까지 완료되었다면 django 실행 환경은 모두 자동적으로 python이 구성해 주었을 것입니다. 
 ##### - Backend 레포지토리의 위치를 url로 복사하여 git clone {복사한 url} 명령어로 레포지토리의 내용을 모두 가져와주세요. 
-###### 복사한 데이터 중에 djangotutorial/ 디렉토리가 존재해야 합니다.
-##### - cd djangotutorial로 디렉토리 이동 후 명령어 "python manage.py runserver" 입력 
+###### 복사한 데이터 중에 djangotuto/ 디렉토리가 존재해야 합니다.
+##### - cd djangotuto로 디렉토리 이동 후 명령어 "python manage.py runserver" 입력 
 ###### *오류가 발생하면 ls를 입력하면 해당 위치에 manage.py가 존재하는지 확인하시길 바랍니다.* </br>runserver localhost:8080... 이 뜨면 성공적으로 서버가 열린 것입니다.
-##### - chrome 창을 새롭게 띄워서 http 칸에 http://localhost:8080/polls/를 입력하고 엔터를 눌러주세요. 
-###### 화면에 "투표에 오신 것을 환영합니다"가 뜬다면 테스트 성공입니다. :)
+##### - chrome 창을 새롭게 띄워서 http 칸에 http://localhost:8000/polls/ 를 입력하고 엔터를 눌러주세요. 
+###### 화면에 "투표 앱에 입장하셨습니다"가 뜨면 테스트 성공입니다. :)
